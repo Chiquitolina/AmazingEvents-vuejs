@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <img id="logo" src="./assets/logo.png">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="./index.html">Home</a>
+                <a class="nav-item nav-link" href="./upcomingevents.html">Upcoming Events</a>
+                <a class="nav-item nav-link" href="./pastevents.html">Past Events</a>
+                <a class="nav-item nav-link" href="./contact.html">Contact</a>
+                <a class="nav-item nav-link" href="./stats.html">Stats</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div id="carouselExampleControls" class="bg-light carousel slide altcarr" data-bs-ride="carousel">
+        <div id="contenedor-carr" class="carousel-inner bg-light.bg-gradient">
+
+        </div>
+        <button class="carousel-control-prev bg-dark" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next bg-dark" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <main class="d-flex flex-column justify-content-center text-center">
+        <div class="container">
+            <table class="table table-sm table-light table-hover text-black text-center border border-white mt-3">
+                <thead>
+                    <tr>
+                        <th colspan="3" class="fs-3">
+                            Events Statistics
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Events with the highest percent of attendance</th>
+                        <th scope="col">Events with the lowest percent of attendance</th>
+                        <th scope="col">Event with larger capacity</th>
+                    </tr>
+                </thead>
+                <tbody id="contenedordatos">
+                    
+                </tbody>
+            </table>
+            <table class="table table-light table-hover table-sm text-black text-center border border-white">
+                <thead>
+                    <tr>
+                        <th colspan="3" class="fs-3">
+                            Upcoming Events statistics by category
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Categories</th>
+                        <th scope="col">Revenues</th>
+                        <th scope="col">Porcentage of attendance</th>
+                    </tr>
+                </thead>
+                <tbody id="contenedorup">
+                </tbody>
+            </table>
+            <table class="table table-light table-hover table-sm text-black text-center border border-white">
+                <thead>
+                    <tr>
+                        <th colspan="3" class="fs-3">
+                            Past Events statistics by category
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Categories</th>
+                        <th scope="col">Revenues</th>
+                        <th scope="col">Porcentage of attendance</th>
+                    </tr>
+                </thead>
+                <tbody id="contenedorpast">
+                
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="d-flex justify-content-between align-items-center">
+        <div>
+            <img class="socials" src="./assets/fb.png">
+            <img class="socials" src="./assets/tw.png">
+            <img class="socials" src="./assets/wp.png">
+        </div>
+        <h3>COHORTE?</h3>
+    </footer>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+        </script>
+        <script src="./stats.js"></script>
+</body>
+
+</html>

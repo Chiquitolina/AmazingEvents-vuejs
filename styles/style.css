@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: white;
+}
+
+nav {
+    z-index: 10000;
+}
+
+main {
+    min-height: 78.7vh;
+}
+
+.altcarr {
+    height: 40vh;
+
+}
+
+footer {
+    min-height: 11.5vh;
+    background-color: grey;
+}
+
+.altimg {
+    height: 8rem;
+    box-shadow: -7px -5px 11px -7px rgba(0,0,0,0.75);
+    margin-top: 1rem;
+}
+
+.socials {
+    width: 3rem;
+    height: 3rem;
+}
+
+#search {
+    margin-top: 0.4rem;
+    height: 1.5rem;
+}
+
+#logo {
+    height: 3rem;
+}
+
+.imgs {
+    object-fit: contain;
+    opacity: 60%;
+    border-radius: 44px;
+    height: 12rem;
+}
+
+
+
+
