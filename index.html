@@ -78,7 +78,8 @@
                 <h5 class="card-title">{{evento.name}}</h5>
                 <p class="card-text" style="font-size: 0.8rem">{{evento.description}}</p>
                     <div class="d-flex justify-content-between">
-                        <span>Price: ${{evento.price}} </span><a href="./details.html?id=${evento._id}" class="btn btn-primary">Details</a>
+                        <span>Price: ${{evento.price}} </span>
+                        <a :href="'./details.html?_id='+evento._id" class="btn btn-primary">Details</a>
                     </div>
             </div>
         </div>

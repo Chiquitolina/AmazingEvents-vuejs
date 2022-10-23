@@ -5,11 +5,14 @@ const { createApp } = Vue
       return {
         eventos: [],
         bkpEventos: [],
+        eventosPAST: [],
         urlApi: 'https://amazing-events.herokuapp.com/api/events',
         categoriasFiltradas : [],
         contenedorCarr: document.getElementById('contenedor-carr'),
         textobuscar : "", 
-        categoriasBuscadas: []
+        categoriasBuscadas: [],
+        evento: {},
+        primerTabla: []
       }
     },
     created() {
@@ -29,9 +32,21 @@ const { createApp } = Vue
                 this.eventos = data.events.filter(evento => evento.date >= data.currentDate ) 
                 } else if (document.title == "Past Events") {
                 this.eventos = data.events.filter(evento => evento.date < data.currentDate)
+                } else {
+                this.eventos = data.events
                 }
                 this.bkpEventos = this.eventos
                 this.categoriasFiltradas = this.filtrarCategorias()
+
+                this.eventosPAST = this.eventos.filter(evento => evento.date < data.currentDate)
+
+                let id = new URLSearchParams(location.search).get('_id')
+                this.evento = this.eventos.find(evento => evento._id == id)
+
+                this.filtrarEventoMayorMenorAsistencia()
+                this.filtrarEventoMayorCapacidad()
+                console.log(this.primerTabla)
+
             })
         },
         filtrarCategorias() {
@@ -43,6 +58,19 @@ const { createApp } = Vue
             })
             return categoriasFiltradas;
         },
+        filtrarEventoMayorCapacidad() {
+            let evento = this.eventos.sort((a, b)=> b.capacity-a.capacity)[0].name
+            this.primerTabla.push(evento)
+
+            return evento;
+        },
+        filtrarEventoMayorMenorAsistencia() {
+            let eventosordenados = this.eventosPAST.sort((a,b) => ((b.assistance*100)/b.capacity)-((a.assistance*100)/a.capacity))
+            this.primerTabla.push(eventosordenados[eventosordenados.length-1].name)
+            this.primerTabla.push(eventosordenados[0].name)
+            return 0
+        }
+       
 
     },
     
