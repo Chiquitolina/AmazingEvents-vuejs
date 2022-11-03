@@ -32,6 +32,12 @@
 <div id="app">
       <div id="carouselExampleControls" class="bg-light carousel slide altcarr" data-bs-ride="carousel">
         <div id="contenedor-carr" class="carousel-inner bg-light.bg-gradient">
+            <div class="carousel-item text-center text-black active">
+                <img src="./assets/logo.png">
+            </div>
+            <div v-for="evento in eventos" class="carousel-item text-center text-black">
+                <img v-bind:src="evento.image">
+            </div>
 
         </div>
         <button class="carousel-control-prev bg-dark" type="button" data-bs-target="#carouselExampleControls"
@@ -72,7 +78,7 @@
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
         </script>
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/vue@3.2.29/dist/vue.global.js"></script>
         <script src="./main.js"></script>
 </body>
 
